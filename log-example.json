@@ -1,0 +1,21 @@
+{
+  "resource_logs": [ {
+    "resource": {
+      "attributes": [ { "key": "service.name", "value": { "string_value": "delorian" } } ]
+    },
+    "scope_logs": [ {
+      "log_records": [ {
+        "time_unix_nano": 1668464803000000000,
+        "observed_time_unix_nano": 1668464803000000000,
+        "body": {
+          "string_value": "Nov 25 10:54:00 localhost: Great Scott!"
+        },
+        "attributes": [
+          { "key": "example_number", "value": { "int_value": "1234" } },
+          { "key": "example_string", "value": { "string_value": "xyz" } }
+        ],
+        "dropped_attributes_count": 0
+      } ]
+    } ]
+  } ]
+}

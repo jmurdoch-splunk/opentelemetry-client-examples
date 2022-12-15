@@ -1,0 +1,24 @@
+{
+  "resource_metrics": [ {
+    "resource": {
+      "attributes": [ { "key": "service.name", "value": { "string_value": "delorian" } } ]
+    },
+    "scope_metrics": [ {
+      "metrics": [ {
+        "name": "fluxcapacitor",
+        "description": "Flux Capacitor Output",
+        "unit": "watts",
+        "gauge": {
+          "data_points": [ {
+            "attributes": [
+              { "key": "licenseplate", "value": { "string_value": "outatime" } }
+            ],
+            "start_time_unix_nano": 1668464803000000000,
+            "time_unix_nano": 1668464803000000000,
+            "asInt": 12345678
+          } ]
+        }
+      } ]
+    } ]
+  } ]
+}
