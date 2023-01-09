@@ -174,8 +174,8 @@ A simple test configuration will be a receiver with `otlp`  using  `http`  to a 
 Incorporate the zpages extension into both OpenTelemetry Collector binaries and the configuration if not already done. It allows diagnostic introspection & instrumentation using HTTP without using any other tooling.  
 
 ## Further Resources
-[OpenTelemetry Collector - Source](https://github.com/open-telemetry/opentelemetry-collector)
-[OpenTelemetry Collector Builder - Source](https://github.com/open-telemetry/opentelemetry-collector/tree/main/cmd/builder)
-[OpenTelemetry Collector Contrib - Additional Components](https://github.com/open-telemetry/opentelemetry-collector-contrib)
-[OpenTelemetry Collector - Splunk Distribution](https://github.com/signalfx/splunk-otel-collector)
-[Go Programming Language - Binaries](https://go.dev/dl/)
+- [OpenTelemetry Collector - Source](https://github.com/open-telemetry/opentelemetry-collector)
+- [OpenTelemetry Collector Builder - Source](https://github.com/open-telemetry/opentelemetry-collector/tree/main/cmd/builder)
+- [OpenTelemetry Collector Contrib - Additional Components](https://github.com/open-telemetry/opentelemetry-collector-contrib)
+- [OpenTelemetry Collector - Splunk Distribution](https://github.com/signalfx/splunk-otel-collector)
+- [Go Programming Language - Binaries](https://go.dev/dl/)
