@@ -1,13 +1,15 @@
 OpenTelemetry Client Examples
 =============================
 
-In this repo there are a few examples of metrics that can be sent to an OpenTelemetry OTLP HTTP endpoint. 
-
-This uses JSON interpretations of the proto definition - not protobuf, so are not representative of good practice or performance.
+In this repo there are a few examples of how to implement OpenTelemetry from a client software perspective:
 
 Examples are:
-- Arduino code for a RP2040 host that logs to /v1/metrics
-- Logs example in JSON for /v1/metrics
-- Metric example in JSON for /v1/logs
+- JSON examples for a log and a metric, derived from the latest proto definition
+- C example (IoT implementation on Arduino/RP2040/ESP32) using the aformentioned JSON
+- Building a Custom OpenTelemetry Collector 
+  - Only recommended for advanced use-cases or development
+  - If in doubt, pick up an official release here:
+    - [OpenTelemetry Upstream](https://github.com/open-telemetry/opentelemetry-collector/releases)
+    - [Splunk-supported Distribution](https://github.com/signalfx/splunk-otel-collector/releases)
 
-All examples are function on OpenTelemetry Collector 0.6.4.
+All examples function with OpenTelemetry Collector 0.6.8

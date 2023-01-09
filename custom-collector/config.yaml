@@ -1,0 +1,36 @@
+extensions:
+  memory_ballast:
+    size_mib: 512
+  zpages:
+    endpoint: 0.0.0.0:55679
+
+receivers:
+  otlp:
+    protocols:
+      http:
+        endpoint: 0.0.0.0:4318
+
+processors:
+  batch:
+  memory_limiter:
+    limit_mib: 1536
+    spike_limit_mib: 512
+    check_interval: 5s
+
+exporters:
+  signalfx:
+    access_token: "<PUT_YOUR_TOKEN_HERE>"
+    api_url: "https://api.us1.signalfx.com"
+    ingest_url: "https://ingest.us1.signalfx.com"
+    sync_host_metadata: true
+    correlation:
+  logging:
+    loglevel: debug
+
+service:
+  pipelines:
+    metrics:
+      receivers: [otlp]
+      processors: [memory_limiter, batch]
+      exporters: [signalfx]
+  extensions: [memory_ballast, zpages]
