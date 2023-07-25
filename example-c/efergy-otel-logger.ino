@@ -159,19 +159,19 @@ void otelPayload(bool type, String endpoint, String uid, String dev, String unit
   String url = "/v1/metrics";
   DynamicJsonDocument payload(1024), metrics(1024);
 
-  payload["resource_metrics"][0]["resource"]["attributes"][0]["key"] = "service.name";
-  payload["resource_metrics"][0]["resource"]["attributes"][0]["value"]["string_value"] = "myhome";
+  payload["resourceMetrics"][0]["resource"]["attributes"][0]["key"] = "service.name";
+  payload["resourceMetrics"][0]["resource"]["attributes"][0]["value"]["stringValue"] = "myhome";
  
   metrics["name"] = dev + "" + uid;
   metrics["description"] = name + " " + uid;
   metrics["unit"] = unit;
-  metrics["gauge"]["data_points"][0]["attributes"][0]["key"] = "uid";
-  metrics["gauge"]["data_points"][0]["attributes"][0]["value"]["int_value"] = uid;
-  metrics["gauge"]["data_points"][0]["start_time_unix_nano"] = now() * 1000000000;
-  metrics["gauge"]["data_points"][0]["time_unix_nano"] = now() * 1000000000;  
-  metrics["gauge"]["data_points"][0]["asInt"] = state;
+  metrics["gauge"]["dataPoints"][0]["attributes"][0]["key"] = "uid";
+  metrics["gauge"]["dataPoints"][0]["attributes"][0]["value"]["intValue"] = uid;
+  metrics["gauge"]["dataPoints"][0]["startTimeUnixNano"] = now() * 1000000000;
+  metrics["gauge"]["dataPoints"][0]["timeUnixNano"] = now() * 1000000000;  
+  metrics["gauge"]["dataPoints"][0]["asInt"] = state;
 
-  payload["resource_metrics"][0]["scope_metrics"][0]["metrics"][0] = metrics;
+  payload["resourceMetrics"][0]["scopeMetrics"][0]["metrics"][0] = metrics;
   String data;
   serializeJson(payload, data);
   Serial.println(data);
