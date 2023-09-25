@@ -11,7 +11,8 @@
         "gauge": {
           "dataPoints": [ {
             "attributes": [
-              { "key": "licenseplate", "value": { "stringValue": "outatime" } }
+              { "key": "licenseplate", "value": { "stringValue": "outatime" } },
+              { "key": "participant.name", "value": { "stringValue": "jmurdoch" } }
             ],
             "timeUnixNano": 1668464803000000000,
             "asInt": 12345678
@@ -21,3 +22,4 @@
     } ]
   } ]
 }
+
